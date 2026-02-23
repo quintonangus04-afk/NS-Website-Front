@@ -24,7 +24,7 @@ async function verify() {
         localStorage.setItem('username', verifyResponse.username)
         document.body.classList.remove('none')
         document.body.classList.add('vis')
-        text.innerHTML = `Hi ${localStorage.getItem('username')}`
+        text.innerHTML = `Hi ${localStorage.getItem('username').username}`
         console.log(localStorage.getItem('username'))
         console.log('user authrised')
     } else {
