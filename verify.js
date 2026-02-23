@@ -63,7 +63,7 @@ codeInput.addEventListener('input', async () => {
 
             } else {
                 document.cookie = `session=${tokenResponse.outcome}; path=/; max-age=43200; secure; samesite=None`
-                window.location.href = '/dashboard.html'
+                window.location.href = 'dashboard.html'
             }
         } else {
             console.log('An error ocoured while atempting to verify, try again later')

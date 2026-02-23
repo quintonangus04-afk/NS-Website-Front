@@ -20,12 +20,13 @@ async function verify() {
 
     if (verifyResponse.outcome === true) {
         localStorage.setItem('username', verifyResponse.username)
-        document.body.style.display = 'flex'
+        document.body.classList.remove('none')
+        document.body.classList.add('vis')
         text.innerHTML = `Welcome ${localStorage.getItem('username')}, your logged in.`
         console.log('user authrised')
     } else {
         console.log('sent to signUp page')
-        window.location.href = '/index.html'
+        window.location.href = 'index.html'
 
     }
 
