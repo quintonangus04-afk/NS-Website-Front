@@ -17,6 +17,7 @@ async function verify() {
 })
     
     const verifyResponse = await cookieCheck.json()
+    console.log('verify response is:')
     console.log(verifyResponse)
 
     if (verifyResponse.outcome === true) {
