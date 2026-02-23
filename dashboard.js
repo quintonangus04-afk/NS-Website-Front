@@ -23,6 +23,7 @@ async function verify() {
         document.body.classList.remove('none')
         document.body.classList.add('vis')
         text.innerHTML = `Hi ${localStorage.getItem('username')}`
+        console.log(localStorage.getItem('username'))
         console.log('user authrised')
     } else {
         console.log('sent to signUp page')
