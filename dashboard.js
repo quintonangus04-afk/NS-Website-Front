@@ -1,6 +1,6 @@
 const raw = document.cookie
 const token = raw.split("=")[1];
-const text = document.getElementsByClassName('text')
+const text = document.getElementsByClassName('text')[0]
 
 console.log(token)
 
@@ -22,7 +22,7 @@ async function verify() {
         localStorage.setItem('username', verifyResponse.username)
         document.body.classList.remove('none')
         document.body.classList.add('vis')
-        text.innerHTML = 'You are logged in.'
+        text.innerHTML = `Hi ${localStorage.getItem('username')}`
         console.log('user authrised')
     } else {
         console.log('sent to signUp page')
