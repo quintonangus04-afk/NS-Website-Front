@@ -30,6 +30,8 @@ const codeInput = document.getElementById('verificationCodeInput')
 codeInput.addEventListener('input', async () => {
     if (codeInput.value.length >= 6) {
         codeInput.disabled = true
+
+        console.log('code entered')
         
         verify = await fetch('https://ns-backend-215034531154.europe-west1.run.app/verifyAccount', {
             method: 'POST',
@@ -61,6 +63,7 @@ codeInput.addEventListener('input', async () => {
 
             } else {
                 document.cookie = `session=${tokenResponse.outcome}; path=/; max-age=43200; secure; samesite=None`
+                window.location.href = '/dashboard.html'
             }
         } else {
             console.log('An error ocoured while atempting to verify, try again later')

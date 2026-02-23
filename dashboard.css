@@ -5,3 +5,10 @@ html, body {
     align-items: center;
     justify-content: center;
 }
+
+.text {
+    font-family: sans-serif; 
+    color: #141414; 
+    font-weight: 450; 
+    font-size: 40px;
+}

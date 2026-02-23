@@ -1,4 +1,10 @@
-const token = document.cookie
+const raw = document.cookie
+const token = raw.split("=")[1];
+const text = document.getElementsByClassName('text')
+
+console.log(token)
+
+verify()
 
 async function verify() {
 
@@ -10,14 +16,17 @@ async function verify() {
     })
 })
     
-    const vetifyResponse = await cookieCheck.json()
+    const verifyResponse = await cookieCheck.json()
 
-    if (verify.vetifyResponse.outcome === true) {
-        localStorage.setItem('username', vetifyResponse.username)
+    if (verifyResponse.outcome === true) {
+        localStorage.setItem('username', verifyResponse.username)
         document.body.style.display = 'flex'
-        document.getElementById('text').innerHTML = `Welcome ${localStorage.username}, your logged in.`
+        text.innerHTML = `Welcome ${localStorage.getItem('username')}, your logged in.`
+        console.log('user authrised')
     } else {
-        window.location.href = 'index.html'
+        console.log('sent to signUp page')
+        window.location.href = '/index.html'
+
     }
 
     
