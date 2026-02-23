@@ -31,6 +31,5 @@ async function verify() {
         window.location.href = 'index.html'
 
     }
-
     
 }
