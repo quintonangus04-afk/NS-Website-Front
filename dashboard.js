@@ -17,6 +17,7 @@ async function verify() {
 })
     
     const verifyResponse = await cookieCheck.json()
+    console.log(verifyResponse)
 
     if (verifyResponse.outcome === true) {
         localStorage.setItem('username', verifyResponse.username)
